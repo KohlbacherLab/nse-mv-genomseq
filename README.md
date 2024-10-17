@@ -36,9 +36,8 @@ Zur einfacheren Bedienung werden externe Module eingesetzt. Diese müssen von ei
 - Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Voragabe-Werte (@DEFAULT "Version der Teilnahmeerklärung")
 - Instance Select: Auswahl einer Fallnummer für Datenupload
 - Instance Table: Eingabe mehrerer Fallnummern pro Patient
-- Orca Search Module: Suchmaske für verschiedene Felder. ([ZIP Datei zum Import der Einstellungen](FallverwaltungModellvorhaben_ModuleSettingsExport.zip))
 - Ansicht der im Projekt aktivierten Module: 
-![Module](Screenshot_MVH_Module.png)
+![Module](NSE_REDCap_Module.png)
 
   
 
