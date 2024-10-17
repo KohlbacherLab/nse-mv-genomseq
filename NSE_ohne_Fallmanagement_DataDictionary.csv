@@ -1,0 +1,81 @@
+﻿"Variable / Field Name";"Form Name";"Section Header";"Field Type";"Field Label";"Choices, Calculations, OR Slider Labels";"Field Note";"Text Validation Type OR Show Slider Number";"Text Validation Min";"Text Validation Max";Identifier?;"Branching Logic (Show field only if...)";"Required Field?";"Custom Alignment";"Question Number (surveys only)";"Matrix Group Name";"Matrix Ranking?";"Field Annotation"
+psn;pseudonym;;text;Pseudonym;;;;;;;;;;;;;
+pat_id;iii_daten_der_einwilligung_und_teilnahmeerklaerung;"Teilnahme Modellvorhaben";text;"Versicherter (Patienten-Identifikationsnummer bzw. Pseudonym";;;;;;;;y;;;;;
+leistungserbringer;iii_daten_der_einwilligung_und_teilnahmeerklaerung;;text;Leistungserbringer;;;;;;;;y;;;;;
+forschung_einwill_desc;iii_daten_der_einwilligung_und_teilnahmeerklaerung;Forschungseinwilligung;descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=forschungseinwilligungen
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neue Einwilligung'"
+gender;iv_allgemeine_daten_zum_modellvorhaben;;dropdown;Geschlecht;"male, Männlich | female, Weiblich | other, Divers | unknown, Unbekannt";;;;;;;y;;;;;
+birthdate;iv_allgemeine_daten_zum_modellvorhaben;;text;Geburtsdatum;;01-MM-YYYY;date_dmy;;;;;y;;;;;
+ags;iv_allgemeine_daten_zum_modellvorhaben;;text;AGS;;;;;;;;y;;;;;" @CHARLIMIT=5"
+aufnahme_mvh;iv_allgemeine_daten_zum_modellvorhaben;"Vorstellung des Versicherten zur Teilnahme am Modellvorhaben";yesno;"Entscheidung der multidisziplinären Fallkonferenz im Bereich der Diagnostik zur Aufnahme des Versicherten in das Modellvorhaben";;;;;;;;y;;;;;
+datum_fallkonferenz;iv_allgemeine_daten_zum_modellvorhaben;;text;"Datum der Fallkonferenz";;;date_dmy;;;;"[aufnahme_mvh] <> ''";y;;;;;
+fallkonferenz_grund;iv_allgemeine_daten_zum_modellvorhaben;;dropdown;"Grund der negativen Entscheidung";"1, Zieldiagnostik empfohlen | 2, wahrscheinlich psychosomatische Erkrankung | 3, wahrscheinlich häufige Erkrankung | 4, wahrscheinlich nicht genetische Ursache | 5, anderer Grund";;;;;;"[aufnahme_mvh] = '0' and [datum_fallkonferenz] <> ''";y;;;;;
+hpo_desc;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;Phänotypisierung;descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=hpo
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neuer HPO Code'"
+klin_datum_fallkonferenz;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"Entscheidung der multidisziplinären Fallkonferenz";text;"Datum Fallkonferenz";;;date_dmy;;;;;y;;;;;
+diagnostik_empfehlung;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;"der Empfehlung zugrundeliegende Genomdiagnostik";"1, Einzelgenom | 2, Duogenom | 3, Triogenom";;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+bewertung_gen_diagnostik;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;"Bewertung der genetischen Diagnostik";"unsolved, keine genetische Diagnosestellung | unclear, Genetische Verdachtsdiagnose | 3, weiterführende genetische Diagnostik empfohlen | solved, Genetische Diagnose gesichert | partially-solved, klinischer Phänotyp nur partiell gelöst";;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
+diag_icd10;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;Diagnose;text;"Diagnose ICD-10";BIOPORTAL:ICD10;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;"// Version?"
+diag_icd10_ver;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"ICD10 Version";;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;" @DEFAULT='2024AA'"
+diag_orphacode;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"Diagnose Orphanet (ORPHAcode)";BIOPORTAL:ORDO;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
+diag_orphacode_ver;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"ORPHAcode Version";;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;" @DEFAULT='4.5'"
+diag_se_code;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;[Alpha]-ID-SE-Code;;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
+diag_gmfcs;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;"Diagnose GMFCS";"1, I | 2, II | 3, III | 4, IV | 5, V";;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
+empfehlung_studie;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;" Empfehlung zu der Teilnahme an einer klinischen Studie";yesno;"Empfehlung zu der Teilnahme an einer klinischen Studie";;;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+studie_desc;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;descriptive;Studien;;;;;;;"[klin_datum_fallkonferenz] <> '' and [empfehlung_studie] = '1'";;;;;;" @INSTANCETABLE=studien
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neue Studie'"
+empf_hg_beratung;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"Empfehlung zur humangenetischen Beratung";yesno;"Empfehlung humangenetische Beratung";;;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+empf_reeval;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"Empfehlung zur diagnostischen Re-Evaluation";yesno;"Empfehlung Re-Evaluation";;;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+empf_therapie;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"Empfehlung einer Therapie";yesno;Therapieempfehlung;;;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+therapie_desc;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;descriptive;;;;;;;;"[klin_datum_fallkonferenz] <> '' and [empf_therapie] = '1'";;;;;;" @INSTANCETABLE=therapien
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neue Therapie'"
+variante;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"stützende molekulare Alteration nach Standard (z. B. OMIM oder HGNC)";text;Variante;;;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+lok_variante;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;"Lokalisation der Variante";"1, kodierend | 2, in regulatorischen Elementen | 3, nicht kodierende und nicht in regulatorischen Elementen";;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+typ_variante;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;Typ;"1, Kausale Variante | 2, Zusatzbefunde | 3, Verdachtsvariante";;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+empf_klinisches_man;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"weitere Empfehlung zum klinischen Management";yesno;"Empfehlungen klinisches Management";;;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
+klin_manag_desc;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;descriptive;;;;;;;;"[klin_datum_fallkonferenz] <> '' and [empf_klinisches_man] = '1'";;;;;;" @INSTANCETABLE=klinisches_management
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neues Klinisches Management'"
+gen_vorbefunde_desc;vi_klinische_daten_zu_vorbefunden;"fallrelevante, genetische Vorbefunde";descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=genetische_vorbefunde
+@INSTANCETABLE_HIDEINSTANCECOL
+@INSTANCETABLE_ADDBTNLABEL='Neuer genetischer Vorbefund'"
+anzahl_stat_behandlungen;vi_klinische_daten_zu_vorbefunden;"fallrelevante Vortherapie";text;"Anzahl der stationären Behandlungen in den letzten fünf Jahren";;;integer;;;;;y;;;;;
+dauer_stat_vortherapie;vi_klinische_daten_zu_vorbefunden;;text;"Geschätzte Dauer der stationären fallrelevante Vortherapie in Tagen";;;integer;;;;;y;;;;;
+datum_kontakt_zse;vi_klinische_daten_zu_vorbefunden;;text;"Monat und Jahr des ersten Kontakts mit einem spezialisierten Zentrum für Seltene Erkrankungen
+";;01-MM-YYYY;date_dmy;;;;;y;;;;;
+wiedervorst_desc;vii_klinische_daten_zur_nachverfolgung;"Dokumentation Wiedervorstellungen";descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=wiedervorstellungen
+@INSTANCETABLE_ADDBTNLABEL='Neue Wiedervorstellung'
+@INSTANCETABLE_HIDEINSTANCECOL"
+vitalstatus;vii_klinische_daten_zur_nachverfolgung;"Allgemeiner Status zur klinischen Nachverfolgung";dropdown;"Vitalstatus beim letzten Kontakt";"1, alive | 2, dead";;;;;;;y;;;;;
+datum_kontakt;vii_klinische_daten_zur_nachverfolgung;;text;"Datum des letzten Kontakts";;;date_dmy;;;;"[vitalstatus] <> ''";y;;;;;
+datum_verstorben;vii_klinische_daten_zur_nachverfolgung;;text;"Sterbemonat und Sterbejahr";;01-MM-YYYY;date_dmy;;;;"[vitalstatus] = '2'";;;;;;
+datum_einwillig_forsch;forschungseinwilligungen;;text;"Datum der Forschung-Einwilligung 
+";;;date_dmy;;;;;;;;;;
+vers_einwillig_forsch;forschungseinwilligungen;;text;"Version der Forschung-Einwilligung";;;;;;;"[datum_einwillig_forsch] <> ''";;;;;;
+umfang_einwillig;forschungseinwilligungen;;notes;"Umfang der Forschung-Einwilligung";;JSON;;;;;"[datum_einwillig_forsch] <> ''";;;;;;
+datum_einwillig_f_wid;forschungseinwilligungen;;text;"Datum des Widerrufs der Forschung-Einwilligung ";;;date_dmy;;;;;;;;;;
+umfang_einwillig_f_wid;forschungseinwilligungen;;notes;"Umfang des Widerrufs der Forschung-Einwilligung ";;JSON;;;;;"[datum_einwillig_f_wid] <> ''";;;;;;
+hpo;hpo;;text;"Phänotypisierung auf der Grundlage der HPO";BIOPORTAL:HP;;;;;;;y;;;;;
+version_hpo;hpo;;text;"Version HP Ontology";;;;;;;;y;;;;;
+beginn_symptome;hpo;;text;"Beginn Symptome";;01-MM-YYYY;date_dmy;;;;;y;;;;;
+studien_register;studien;;dropdown;Studien-Register;"1, NCT | 2, DRKS | 3, Eudra-CT | 4, other";;;;;;"[studienname] = ''";;;;;;"// mehr Studien?"
+studienname;studien;;text;Studienname;;;;;;;"[studien_register] = ''";;;;;;
+studien_id;studien;;text;Studien-ID;;;;;;;"[studien_register] = ''";;;;;;
+therapie_art;therapien;;dropdown;"Art der empfohlenen Therapie ";"symptomatic-therapy, Symptomatische nicht-medikamentöse Therapie (Fördermaßnahmen) | symptomatic-medication-administration, Symptomatische medikamentöse Therapie (bspw. antispastische Medikation) | symptomatic-intervention, Symptomatische interventionelle Therapie (Operationen, Injektionen) | causal-medication-administration, Kausale Therapie (medikamentös) | causal-intervention, Kausale Therapie (interventionell)";;;;;;;y;;;;;
+therapie_beschreibung;therapien;;text;"Beschreibung der empfohlenen Therapie";;;;;;;;y;;;;;
+therapie_gen_variante;therapien;;text;"der empfohlenen Therapie zugrundeliegende genetische Variante(n)";;;;;;;;;;;;;"// wann verpflichtend?"
+klinisches_management;klinisches_management;;dropdown;"Beschreibung klinisches Management";"disease-specific-ambulatory-care, Indikatorerkrankungsspezifische Ambulanz | university-ambulatory-care, Andere Hochschulambulanz | local-crd, Eigenes ZSE | other-crd, Anderes ZSE | other-ambulatory-care, Andere Ambulanz | gp, Hausarzt | specialist, Niedergelassener Facharzt";;;;;;;y;;;;;
+art_diagnostik;genetische_vorbefunde;;dropdown;"Art der Diagnostik";"1, Array | 2, Einzelgentestung | 3, Panel | 4, Chromosomenanalyse | 5, Exomanalyse | 6, andere";;;;;;;y;;;;;
+datum_diagnostik;genetische_vorbefunde;;text;"Datum der Diagnostik";;;date_dmy;;;;;y;;;;;
+ergebnis_diagnostik;genetische_vorbefunde;;dropdown;"Ergebnis der Diagnostik";"1, Phänotyp nicht komplett geklärt | 2, Strukturvariante mit unklarem Bruchpunkt | 3, heterozygote Variante bei genetischer Erkrankung | 4, keine pathogene Variante detektiert | 5, sonstige";;;;;;;;;;;;
+datum_wiedervorst;wiedervorstellungen;;text;Datum;;;date_dmy;;;;;y;;;;;
+hpo_wiedervorst;wiedervorstellungen;;text;"Phänotypisierung auf der Grundlage der HPO";;;;;;;;;;;;;" @FORMINSTANCE=hpo"
+hpo_wiedervorst_aend;wiedervorstellungen;;dropdown;"Änderung des HPO";"1, neu hinzugekommen | 2, verbessert | 3, verschlechtert | 4, weggefallen";;;;;;;y;;;;;
+gmfcs_wiedervorst_aend;wiedervorstellungen;;dropdown;"GMFCS
+";"1, I | 2, II | 3, III | 4, IV | 5, V";;;;;;;;;;;;
+diagnose_wiedervorst;wiedervorstellungen;;yesno;"Diagnosestellung erfolgt";;;;;;;;y;;;;;
+ergaenz_wiedervorst;wiedervorstellungen;;text;"Ergänzende Daten zum Verlauf der Erkrankung";;;;;;;;y;;;;;
