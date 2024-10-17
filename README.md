@@ -12,22 +12,22 @@ Es gibt 2 Varianten des Projekts:
 ### Anlegen des Projekts "Dokumentation mit Daten zum Fallmanagement"
 - Das Projekt inklusive notwendiger Einstellungen kann von einem REDCap Administrator mit der [CDISC ODM XML-Vorlage](NSE_mit_Fallmanagement_REDCap.xml) erstellt werden:
 
-![Create Project]()
+![Create Project](NSE_create_project_m.png)
 - Alternativ kann ein leeres Projekt erstellt werden und dort die Datenstruktur mit der [CSV Datei](NSE_mit_Fallmanagement_DataDictionary.csv) importiert werden (Strichpunkt als Separator).
 
 Die Projekteinstellungen müssen dann allerdings manuell vorgenommen werden, v.a. die Einstellungen zu den wiederholten Fragebögen:
-![Module]()
+![Module](NSE_repeated_m.png)
 
 - Datenstruktur: [PDF Datei](NSE_mit_Fallmanagement_REDCap.pdf)
 
 ### Anlegen des Projekts "Dokumentation ohne Daten zum Fallmanagement"
 - Das Projekt inklusive notwendiger Einstellungen kann von einem REDCap Administrator mit der [CDISC ODM XML-Vorlage](NSE_ohne_Fallmanagement_REDCap.xml) erstellt werden:
 
-![Create Project]()
+![Create Project](NSE_create_project_o.png)
 - Alternativ kann ein leeres Projekt erstellt werden und dort die Datenstruktur mit der [CSV Datei](NSE_ohne_Fallmanagement_DataDictionary.csv) importiert werden (Strichpunkt als Separator).
 
 Die Projekteinstellungen müssen dann allerdings manuell vorgenommen werden, v.a. die Einstellungen zu den wiederholten Fragebögen:
-![Module]()
+![Module](NSE_repeated_o.png)
 
 - Datenstruktur: [PDF Datei](NSE_ohne_Fallmanagement_REDCap.pdf)
 
