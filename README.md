@@ -31,6 +31,10 @@ Die Projekteinstellungen müssen dann allerdings manuell vorgenommen werden, v.a
 
 - Datenstruktur: [PDF Datei](NSE_ohne_Fallmanagement_REDCap.pdf)
 
+### Aktivieren des Ontologie-Browsers
+Zur Eingabe der HPO-Codes etc. muss die Suche in den Ontologien aktiviert werden. Dazu wird der Service im Kontrollcenter -> Modules / Services Configuration aktiviert und ein gültiges Token für die Bioportal API hinterlegt:
+![Ontologie Service](nse_bioportal.png)
+
 ### Benötigte Module
 Zur einfacheren Bedienung werden externe Module eingesetzt. Diese müssen von einem REDCap Administrator im Kontrollzentrum installiert und im Projekt aktiviert werden:
 - Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Voragabe-Werte (@DEFAULT Action Tag)
