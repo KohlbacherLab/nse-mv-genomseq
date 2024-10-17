@@ -33,7 +33,7 @@ Die Projekteinstellungen müssen dann allerdings manuell vorgenommen werden, v.a
 
 ### Benötigte Module
 Zur einfacheren Bedienung werden externe Module eingesetzt. Diese müssen von einem REDCap Administrator im Kontrollzentrum installiert und im Projekt aktiviert werden:
-- Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Voragabe-Werte (@DEFAULT "Version der Teilnahmeerklärung")
+- Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Voragabe-Werte (@DEFAULT Action Tag)
 - Instance Select: Auswahl einer Fallnummer für Datenupload
 - Instance Table: Eingabe mehrerer Fallnummern pro Patient
 - Ansicht der im Projekt aktivierten Module: 
