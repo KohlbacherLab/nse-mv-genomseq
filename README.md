@@ -37,9 +37,9 @@ Zur Eingabe der HPO-Codes etc. muss die Suche in den Ontologien aktiviert werden
 
 ### 3. Benötigte Module
 Zur einfacheren Bedienung werden externe Module eingesetzt. Diese müssen von einem REDCap Administrator im Kontrollzentrum installiert und im Projekt aktiviert werden:
-- Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Voragabe-Werte (@DEFAULT Action Tag)
-- Instance Select: Auswahl einer Fallnummer für Datenupload
-- Instance Table: Eingabe mehrerer Fallnummern pro Patient
+- Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Vorgabe-Werte (@DEFAULT Action Tag)
+- Instance Select: Auswahl einer Instanz eines Formulars
+- Instance Table: Eingabe mehrerer Instanzen eines Formulars
 - Ansicht der im Projekt aktivierten Module: 
 ![Module](NSE_REDCap_Module.png)
 
