@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" AsOfDateTime="2024-10-17T12:07:33" CreationDateTime="2024-10-17T12:07:33" SourceSystem="REDCap" SourceSystemVersion="14.7.0">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" AsOfDateTime="2024-11-06T15:29:00" CreationDateTime="2024-11-06T15:29:00" SourceSystem="REDCap" SourceSystemVersion="14.7.2">
 <Study OID="Project.NetzwerkSelteneErkankungenOhne">
 <GlobalVariables>
 	<StudyName>Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)</StudyName>
@@ -19,6 +19,7 @@
 	<redcap:RequireChangeReason>0</redcap:RequireChangeReason>
 	<redcap:DataHistoryPopup>1</redcap:DataHistoryPopup>
 	<redcap:OrderRecordsByField></redcap:OrderRecordsByField>
+	<redcap:taskCompleteStatus>0</redcap:taskCompleteStatus>
 	<redcap:MyCapEnabled>0</redcap:MyCapEnabled>
 	<redcap:Purpose>2</redcap:Purpose>
 	<redcap:PurposeOther>1</redcap:PurposeOther>
@@ -36,20 +37,20 @@
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="forschungseinwilligungen" redcap:CustomLabel="[datum_einwillig_forsch]"/>
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="hpo" redcap:CustomLabel="[hpo]"/>
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="studien" redcap:CustomLabel="[studien_register]"/>
-			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="therapien" redcap:CustomLabel="[therapie_art]"/>
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="klinisches_management" redcap:CustomLabel="[klinisches_management]"/>
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="genetische_vorbefunde" redcap:CustomLabel="[art_diagnostik]"/>
 			<redcap:RepeatingInstrument redcap:UniqueEventName="event_1_arm_1" redcap:RepeatInstrument="wiedervorstellungen" redcap:CustomLabel="[datum_wiedervorst]"/>
 		</redcap:RepeatingInstruments>
 	</redcap:RepeatingInstrumentsAndEvents>
 	<redcap:UserRolesGroup>
+		<redcap:UserRoles role_name="data entry" unique_role_name="U-594PL9TPC9" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[pseudonym,1][iii_daten_der_einwilligung_und_teilnahmeerklaerung,1][iv_allgemeine_daten_zum_modellvorhaben,1][v_klinische_daten_mit_bezug_zur_teilnahme_am_model,1][vi_klinische_daten_zu_vorbefunden,1][vii_klinische_daten_zur_nachverfolgung,1][forschungseinwilligungen,1][hpo,1][studien,1][therapien,1][klinisches_management,1][genetische_vorbefunde,1][wiedervorstellungen,1]" data_import_tool="0" data_comparison_tool="0" data_logging="0" email_logging="0" file_repository="1" double_data="0" user_rights="0" data_access_groups="0" graphical="1" reports="1" design="0" alerts="0" calendar="0" data_entry="[pseudonym,1][iii_daten_der_einwilligung_und_teilnahmeerklaerung,1][iv_allgemeine_daten_zum_modellvorhaben,1][v_klinische_daten_mit_bezug_zur_teilnahme_am_model,1][vi_klinische_daten_zu_vorbefunden,1][vii_klinische_daten_zur_nachverfolgung,1][forschungseinwilligungen,1][hpo,1][studien,1][therapien,1][klinisches_management,1][genetische_vorbefunde,1][wiedervorstellungen,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="0" record_delete="0" dts="0" participants="1" data_quality_design="0" data_quality_execute="0" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 		<redcap:UserRoles role_name="project manager" unique_role_name="U-183Y7KRMHF" lock_record="0" lock_record_multiform="0" lock_record_customize="0" data_export_tool="" data_export_instruments="[iii_daten_der_einwilligung_und_teilnahmeerklaerung,1][forschungseinwilligungen,1][iv_allgemeine_daten_zum_modellvorhaben,1][v_klinische_daten_mit_bezug_zur_teilnahme_am_model,1][hpo,1][studien,1][therapien,1][klinisches_management,1][vi_klinische_daten_zu_vorbefunden,1][vii_klinische_daten_zur_nachverfolgung,1][genetische_vorbefunde,1][wiedervorstellungen,1][pseudonym,1]" data_import_tool="1" data_comparison_tool="0" data_logging="1" email_logging="1" file_repository="1" double_data="0" user_rights="1" data_access_groups="0" graphical="1" reports="1" design="1" alerts="1" calendar="0" data_entry="[iii_daten_der_einwilligung_und_teilnahmeerklaerung,1][forschungseinwilligungen,1][iv_allgemeine_daten_zum_modellvorhaben,1][v_klinische_daten_mit_bezug_zur_teilnahme_am_model,1][hpo,1][studien,1][therapien,1][klinisches_management,1][vi_klinische_daten_zu_vorbefunden,1][vii_klinische_daten_zur_nachverfolgung,1][genetische_vorbefunde,1][wiedervorstellungen,1][pseudonym,1]" api_export="0" api_import="0" api_modules="0" mobile_app="0" mobile_app_download_data="0" record_create="1" record_rename="1" record_delete="1" dts="0" participants="1" data_quality_design="1" data_quality_execute="1" data_quality_resolution="1" random_setup="0" random_dashboard="0" random_perform="0" realtime_webservice_mapping="0" realtime_webservice_adjudicate="0" external_module_config="" mycap_participants="1"/>
 	</redcap:UserRolesGroup>
 	<redcap:FormDisplayLogicConditionsGroup>
 		<redcap:FormDisplayLogicConditions control_condition="[psn] &lt;&gt; &quot;&quot;" forms_events="event_1_arm_1:iii_daten_der_einwilligung_und_teilnahmeerklaerung,event_1_arm_1:iv_allgemeine_daten_zum_modellvorhaben,event_1_arm_1:v_klinische_daten_mit_bezug_zur_teilnahme_am_model,event_1_arm_1:vi_klinische_daten_zu_vorbefunden,event_1_arm_1:vii_klinische_daten_zur_nachverfolgung,event_1_arm_1:forschungseinwilligungen,event_1_arm_1:hpo,event_1_arm_1:studien,event_1_arm_1:therapien,event_1_arm_1:klinisches_management,event_1_arm_1:genetische_vorbefunde,event_1_arm_1:wiedervorstellungen"/>
 	</redcap:FormDisplayLogicConditionsGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.NetzwerkSelteneErkankungenOhne_2024-10-17_1207" Name="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" redcap:RecordIdField="psn">
+<MetaDataVersion OID="Metadata.NetzwerkSelteneErkankungenOhne_2024-11-06_1529" Name="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" redcap:RecordIdField="psn">
 	<FormDef OID="Form.pseudonym" Name="Pseudonym" Repeating="No" redcap:FormName="pseudonym">
 		<ItemGroupRef ItemGroupOID="pseudonym.psn" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="pseudonym.pseudonym_complete" Mandatory="No"/>
@@ -62,8 +63,8 @@
 	</FormDef>
 	<FormDef OID="Form.iv_allgemeine_daten_zum_modellvorhaben" Name="IV. Allgemeine Daten zum Modellvorhaben" Repeating="No" redcap:FormName="iv_allgemeine_daten_zum_modellvorhaben">
 		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.gender" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.iv_allgemeine_daten_zum_modellvorhaben_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.v_klinische_daten_mit_bezug_zur_teilnahme_am_model" Name="V. Klinische Daten mit Bezug zur Teilnahme am Modellvorhaben" Repeating="No" redcap:FormName="v_klinische_daten_mit_bezug_zur_teilnahme_am_model">
@@ -78,8 +79,6 @@
 		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.empf_reeval" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.empf_therapie" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.therapie_desc" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.variante" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.lok_variante" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.empf_klinisches_man" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.klin_manag_desc" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.v_klinische_daten_mit_bezug_zur_teilnahme_am_model_complete" Mandatory="No"/>
@@ -108,9 +107,15 @@
 		<ItemGroupRef ItemGroupOID="studien.studien_register" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="studien.studien_complete" Mandatory="No"/>
 	</FormDef>
-	<FormDef OID="Form.therapien" Name="Therapien" Repeating="No" redcap:FormName="therapien">
-		<ItemGroupRef ItemGroupOID="therapien.therapie_art" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="therapien.therapien_complete" Mandatory="No"/>
+	<FormDef OID="Form.therapieempfehlungen" Name="Therapieempfehlungen" Repeating="No" redcap:FormName="therapieempfehlungen">
+		<ItemGroupRef ItemGroupOID="therapieempfehlungen.therapie_art" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="therapieempfehlungen.variante1" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="therapieempfehlungen.variante2" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="therapieempfehlungen.therapieempfehlungen_complete" Mandatory="No"/>
+	</FormDef>
+	<FormDef OID="Form.varianten" Name="Varianten" Repeating="No" redcap:FormName="varianten">
+		<ItemGroupRef ItemGroupOID="varianten.variante" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="varianten.varianten_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.klinisches_management" Name="Klinisches Management" Repeating="No" redcap:FormName="klinisches_management">
 		<ItemGroupRef ItemGroupOID="klinisches_management.klinisches_management" Mandatory="No"/>
@@ -146,12 +151,13 @@
 		<ItemRef ItemOID="gender" Mandatory="Yes" redcap:Variable="gender"/>
 		<ItemRef ItemOID="birthdate" Mandatory="Yes" redcap:Variable="birthdate"/>
 		<ItemRef ItemOID="ags" Mandatory="Yes" redcap:Variable="ags"/>
+		<ItemRef ItemOID="grunderkrankung" Mandatory="Yes" redcap:Variable="grunderkrankung"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Name="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" Repeating="No">
-		<ItemRef ItemOID="aufnahme_mvh" Mandatory="Yes" redcap:Variable="aufnahme_mvh"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Name="IV. Allgemeine Daten zum Modellvorhaben" Repeating="No">
+	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Name="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" Repeating="No">
 		<ItemRef ItemOID="datum_fallkonferenz" Mandatory="Yes" redcap:Variable="datum_fallkonferenz"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Name="IV. Allgemeine Daten zum Modellvorhaben" Repeating="No">
+		<ItemRef ItemOID="aufnahme_mvh" Mandatory="Yes" redcap:Variable="aufnahme_mvh"/>
 		<ItemRef ItemOID="fallkonferenz_grund" Mandatory="Yes" redcap:Variable="fallkonferenz_grund"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.iv_allgemeine_daten_zum_modellvorhaben_complete" Name="Form Status" Repeating="No">
@@ -195,13 +201,6 @@
 	<ItemGroupDef OID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.therapie_desc" Name="V. Klinische Daten mit Bezug zur Teilnahme am Modellvorhaben" Repeating="No">
 		<ItemRef ItemOID="therapie_desc" Mandatory="No" redcap:Variable="therapie_desc"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.variante" Name="stützende molekulare Alteration nach Standard (z. B. OMIM oder HGNC)" Repeating="No">
-		<ItemRef ItemOID="variante" Mandatory="Yes" redcap:Variable="variante"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.lok_variante" Name="V. Klinische Daten mit Bezug zur Teilnahme am Modellvorhaben" Repeating="No">
-		<ItemRef ItemOID="lok_variante" Mandatory="Yes" redcap:Variable="lok_variante"/>
-		<ItemRef ItemOID="typ_variante" Mandatory="Yes" redcap:Variable="typ_variante"/>
-	</ItemGroupDef>
 	<ItemGroupDef OID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model.empf_klinisches_man" Name="weitere Empfehlung zum klinischen Management" Repeating="No">
 		<ItemRef ItemOID="empf_klinisches_man" Mandatory="Yes" redcap:Variable="empf_klinisches_man"/>
 	</ItemGroupDef>
@@ -239,10 +238,10 @@
 	</ItemGroupDef>
 	<ItemGroupDef OID="forschungseinwilligungen.datum_einwillig_forsch" Name="Forschungseinwilligungen" Repeating="No">
 		<ItemRef ItemOID="datum_einwillig_forsch" Mandatory="No" redcap:Variable="datum_einwillig_forsch"/>
-		<ItemRef ItemOID="vers_einwillig_forsch" Mandatory="No" redcap:Variable="vers_einwillig_forsch"/>
-		<ItemRef ItemOID="umfang_einwillig" Mandatory="No" redcap:Variable="umfang_einwillig"/>
+		<ItemRef ItemOID="vers_einwillig_forsch" Mandatory="Yes" redcap:Variable="vers_einwillig_forsch"/>
+		<ItemRef ItemOID="umfang_einwillig" Mandatory="Yes" redcap:Variable="umfang_einwillig"/>
 		<ItemRef ItemOID="datum_einwillig_f_wid" Mandatory="No" redcap:Variable="datum_einwillig_f_wid"/>
-		<ItemRef ItemOID="umfang_einwillig_f_wid" Mandatory="No" redcap:Variable="umfang_einwillig_f_wid"/>
+		<ItemRef ItemOID="umfang_einwillig_f_wid" Mandatory="Yes" redcap:Variable="umfang_einwillig_f_wid"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="forschungseinwilligungen.forschungseinwilligungen_complete" Name="Form Status" Repeating="No">
 		<ItemRef ItemOID="forschungseinwilligungen_complete" Mandatory="No" redcap:Variable="forschungseinwilligungen_complete"/>
@@ -263,13 +262,29 @@
 	<ItemGroupDef OID="studien.studien_complete" Name="Form Status" Repeating="No">
 		<ItemRef ItemOID="studien_complete" Mandatory="No" redcap:Variable="studien_complete"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="therapien.therapie_art" Name="Therapien" Repeating="No">
+	<ItemGroupDef OID="therapieempfehlungen.therapie_art" Name="Therapieempfehlungen" Repeating="No">
 		<ItemRef ItemOID="therapie_art" Mandatory="Yes" redcap:Variable="therapie_art"/>
 		<ItemRef ItemOID="therapie_beschreibung" Mandatory="Yes" redcap:Variable="therapie_beschreibung"/>
-		<ItemRef ItemOID="therapie_gen_variante" Mandatory="No" redcap:Variable="therapie_gen_variante"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="therapien.therapien_complete" Name="Form Status" Repeating="No">
-		<ItemRef ItemOID="therapien_complete" Mandatory="No" redcap:Variable="therapien_complete"/>
+	<ItemGroupDef OID="therapieempfehlungen.variante1" Name="zugrundeliegende genetische Variante(n)" Repeating="No">
+		<ItemRef ItemOID="variante1" Mandatory="No" redcap:Variable="variante1"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="therapieempfehlungen.variante2" Name="Therapieempfehlungen" Repeating="No">
+		<ItemRef ItemOID="variante2" Mandatory="No" redcap:Variable="variante2"/>
+		<ItemRef ItemOID="variante3" Mandatory="No" redcap:Variable="variante3"/>
+		<ItemRef ItemOID="variante4" Mandatory="No" redcap:Variable="variante4"/>
+		<ItemRef ItemOID="variante5" Mandatory="No" redcap:Variable="variante5"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="therapieempfehlungen.therapieempfehlungen_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="therapieempfehlungen_complete" Mandatory="No" redcap:Variable="therapieempfehlungen_complete"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="varianten.variante" Name="Varianten" Repeating="No">
+		<ItemRef ItemOID="variante" Mandatory="Yes" redcap:Variable="variante"/>
+		<ItemRef ItemOID="lok_variante" Mandatory="Yes" redcap:Variable="lok_variante"/>
+		<ItemRef ItemOID="typ_variante" Mandatory="Yes" redcap:Variable="typ_variante"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="varianten.varianten_complete" Name="Form Status" Repeating="No">
+		<ItemRef ItemOID="varianten_complete" Mandatory="No" redcap:Variable="varianten_complete"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="klinisches_management.klinisches_management" Name="Klinisches Management" Repeating="No">
 		<ItemRef ItemOID="klinisches_management" Mandatory="Yes" redcap:Variable="klinisches_management"/>
@@ -306,8 +321,9 @@
 	<ItemDef OID="pat_id" Name="pat_id" DataType="text" Length="999" redcap:Variable="pat_id" redcap:FieldType="text" redcap:SectionHeader="Teilnahme Modellvorhaben" redcap:RequiredField="y">
 		<Question><TranslatedText>Versicherter (Patienten-Identifikationsnummer bzw. Pseudonym</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="leistungserbringer" Name="leistungserbringer" DataType="text" Length="999" redcap:Variable="leistungserbringer" redcap:FieldType="text" redcap:RequiredField="y">
+	<ItemDef OID="leistungserbringer" Name="leistungserbringer" DataType="text" Length="1" redcap:Variable="leistungserbringer" redcap:FieldType="select" redcap:RequiredField="y">
 		<Question><TranslatedText>Leistungserbringer</TranslatedText></Question>
+		<CodeListRef CodeListOID="leistungserbringer.choices"/>
 	</ItemDef>
 	<ItemDef OID="forschung_einwill_desc" Name="forschung_einwill_desc" DataType="text" Length="999" redcap:Variable="forschung_einwill_desc" redcap:FieldType="descriptive" redcap:SectionHeader="Forschungseinwilligung" redcap:FieldAnnotation="@INSTANCETABLE=forschungseinwilligungen
 @INSTANCETABLE_HIDEINSTANCECOL
@@ -328,15 +344,18 @@
 	<ItemDef OID="ags" Name="ags" DataType="text" Length="999" redcap:Variable="ags" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="@CHARLIMIT=5">
 		<Question><TranslatedText>AGS</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="aufnahme_mvh" Name="aufnahme_mvh" DataType="boolean" Length="1" redcap:Variable="aufnahme_mvh" redcap:FieldType="yesno" redcap:SectionHeader="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" redcap:RequiredField="y">
+	<ItemDef OID="grunderkrankung" Name="grunderkrankung" DataType="text" Length="999" redcap:Variable="grunderkrankung" redcap:FieldType="textarea" redcap:RequiredField="y" redcap:FieldAnnotation="// NO_EXPORT">
+		<Question><TranslatedText>Grunderkrankung, kurze klinische Beschreibung und Fragestellung Fallkonferenz</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="datum_fallkonferenz" Name="datum_fallkonferenz" DataType="date" Length="999" redcap:Variable="datum_fallkonferenz" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldNote="Fallkonferenz 1" redcap:SectionHeader="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" redcap:RequiredField="y" redcap:BranchingLogic="[aufnahme_mvh] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Datum der Fallkonferenz</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="aufnahme_mvh" Name="aufnahme_mvh" DataType="boolean" Length="1" redcap:Variable="aufnahme_mvh" redcap:FieldType="yesno" redcap:FieldNote="FK prüft, ob Indikation für Genomseq. gegeben ist oder nicht" redcap:RequiredField="y">
 		<Question><TranslatedText>Entscheidung der multidisziplinären Fallkonferenz im Bereich der Diagnostik zur Aufnahme des Versicherten in das Modellvorhaben</TranslatedText></Question>
 		<CodeListRef CodeListOID="aufnahme_mvh.choices"/>
 	</ItemDef>
-	<ItemDef OID="datum_fallkonferenz" Name="datum_fallkonferenz" DataType="date" Length="999" redcap:Variable="datum_fallkonferenz" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:RequiredField="y" redcap:BranchingLogic="[aufnahme_mvh] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Datum der Fallkonferenz</TranslatedText></Question>
-	</ItemDef>
 	<ItemDef OID="fallkonferenz_grund" Name="fallkonferenz_grund" DataType="text" Length="1" redcap:Variable="fallkonferenz_grund" redcap:FieldType="select" redcap:RequiredField="y" redcap:BranchingLogic="[aufnahme_mvh] = &#039;0&#039; and [datum_fallkonferenz] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Grund der negativen Entscheidung</TranslatedText></Question>
+		<Question><TranslatedText>Begründung der negativen Entscheidung (keine Genomsequenzierung)</TranslatedText></Question>
 		<CodeListRef CodeListOID="fallkonferenz_grund.choices"/>
 	</ItemDef>
 	<ItemDef OID="iv_allgemeine_daten_zum_modellvorhaben_complete" Name="iv_allgemeine_daten_zum_modellvorhaben_complete" DataType="text" Length="1" redcap:Variable="iv_allgemeine_daten_zum_modellvorhaben_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
@@ -362,13 +381,13 @@
 	<ItemDef OID="diag_icd10" Name="diag_icd10" DataType="text" Length="999" redcap:Variable="diag_icd10" redcap:FieldType="text" redcap:SectionHeader="Diagnose" redcap:OntologySearch="BIOPORTAL:ICD10" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="// Version?">
 		<Question><TranslatedText>Diagnose ICD-10</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="diag_icd10_ver" Name="diag_icd10_ver" DataType="text" Length="999" redcap:Variable="diag_icd10_ver" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@DEFAULT=&#039;2024AA&#039;">
+	<ItemDef OID="diag_icd10_ver" Name="diag_icd10_ver" DataType="text" Length="999" redcap:Variable="diag_icd10_ver" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@IF([diag_icd10_ver] = &#039;&#039;,@SETVALUE=&#039;2024AA&#039;,&#039;&#039;)">
 		<Question><TranslatedText>ICD10 Version</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="diag_orphacode" Name="diag_orphacode" DataType="text" Length="999" redcap:Variable="diag_orphacode" redcap:FieldType="text" redcap:OntologySearch="BIOPORTAL:ORDO" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Diagnose Orphanet (ORPHAcode)</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="diag_orphacode_ver" Name="diag_orphacode_ver" DataType="text" Length="999" redcap:Variable="diag_orphacode_ver" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@DEFAULT=&#039;4.5&#039;">
+	<ItemDef OID="diag_orphacode_ver" Name="diag_orphacode_ver" DataType="text" Length="999" redcap:Variable="diag_orphacode_ver" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@IF([diag_orphacode_ver] = &#039;&#039;,@SETVALUE=&#039;4.5&#039;,&#039;&#039;)">
 		<Question><TranslatedText>ORPHAcode Version</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="diag_se_code" Name="diag_se_code" DataType="text" Length="999" redcap:Variable="diag_se_code" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
@@ -399,21 +418,10 @@
 		<Question><TranslatedText>Therapieempfehlung</TranslatedText></Question>
 		<CodeListRef CodeListOID="empf_therapie.choices"/>
 	</ItemDef>
-	<ItemDef OID="therapie_desc" Name="therapie_desc" DataType="text" Length="999" redcap:Variable="therapie_desc" redcap:FieldType="descriptive" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039; and [empf_therapie] = &#039;1&#039;" redcap:FieldAnnotation="@INSTANCETABLE=therapien
+	<ItemDef OID="therapie_desc" Name="therapie_desc" DataType="text" Length="999" redcap:Variable="therapie_desc" redcap:FieldType="descriptive" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039; and [empf_therapie] = &#039;1&#039;" redcap:FieldAnnotation="@INSTANCETABLE=therapieempfehlungen
 @INSTANCETABLE_HIDEINSTANCECOL
-@INSTANCETABLE_ADDBTNLABEL=&#039;Neue Therapie&#039;">
+@INSTANCETABLE_ADDBTNLABEL=&#039;Neue Therapieempfehlung&#039;">
 		<Question><TranslatedText></TranslatedText></Question>
-	</ItemDef>
-	<ItemDef OID="variante" Name="variante" DataType="text" Length="999" redcap:Variable="variante" redcap:FieldType="text" redcap:SectionHeader="stützende molekulare Alteration nach Standard (z. B. OMIM oder HGNC)" redcap:RequiredField="y" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Variante</TranslatedText></Question>
-	</ItemDef>
-	<ItemDef OID="lok_variante" Name="lok_variante" DataType="text" Length="1" redcap:Variable="lok_variante" redcap:FieldType="select" redcap:RequiredField="y" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Lokalisation der Variante</TranslatedText></Question>
-		<CodeListRef CodeListOID="lok_variante.choices"/>
-	</ItemDef>
-	<ItemDef OID="typ_variante" Name="typ_variante" DataType="text" Length="1" redcap:Variable="typ_variante" redcap:FieldType="select" redcap:RequiredField="y" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Typ</TranslatedText></Question>
-		<CodeListRef CodeListOID="typ_variante.choices"/>
 	</ItemDef>
 	<ItemDef OID="empf_klinisches_man" Name="empf_klinisches_man" DataType="boolean" Length="1" redcap:Variable="empf_klinisches_man" redcap:FieldType="yesno" redcap:SectionHeader="weitere Empfehlung zum klinischen Management" redcap:RequiredField="y" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Empfehlungen klinisches Management</TranslatedText></Question>
@@ -421,7 +429,7 @@
 	</ItemDef>
 	<ItemDef OID="klin_manag_desc" Name="klin_manag_desc" DataType="text" Length="999" redcap:Variable="klin_manag_desc" redcap:FieldType="descriptive" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039; and [empf_klinisches_man] = &#039;1&#039;" redcap:FieldAnnotation="@INSTANCETABLE=klinisches_management
 @INSTANCETABLE_HIDEINSTANCECOL
-@INSTANCETABLE_ADDBTNLABEL=&#039;Neues Klinisches Management&#039;">
+@INSTANCETABLE_ADDBTNLABEL=&#039;Neue Empfehlung&#039;">
 		<Question><TranslatedText></TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="v_klinische_daten_mit_bezug_zur_teilnahme_am_model_complete" Name="v_klinische_daten_mit_bezug_zur_teilnahme_am_model_complete" DataType="text" Length="1" redcap:Variable="v_klinische_daten_mit_bezug_zur_teilnahme_am_model_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
@@ -470,16 +478,17 @@
 		<Question><TranslatedText>Datum der Forschung-Einwilligung 
 </TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="vers_einwillig_forsch" Name="vers_einwillig_forsch" DataType="text" Length="999" redcap:Variable="vers_einwillig_forsch" redcap:FieldType="text" redcap:BranchingLogic="[datum_einwillig_forsch] &lt;&gt; &#039;&#039;">
+	<ItemDef OID="vers_einwillig_forsch" Name="vers_einwillig_forsch" DataType="text" Length="1" redcap:Variable="vers_einwillig_forsch" redcap:FieldType="select" redcap:RequiredField="y" redcap:BranchingLogic="[datum_einwillig_forsch] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Version der Forschung-Einwilligung</TranslatedText></Question>
+		<CodeListRef CodeListOID="vers_einwillig_forsch.choices"/>
 	</ItemDef>
-	<ItemDef OID="umfang_einwillig" Name="umfang_einwillig" DataType="text" Length="999" redcap:Variable="umfang_einwillig" redcap:FieldType="textarea" redcap:FieldNote="JSON" redcap:BranchingLogic="[datum_einwillig_forsch] &lt;&gt; &#039;&#039;">
+	<ItemDef OID="umfang_einwillig" Name="umfang_einwillig" DataType="text" Length="999" redcap:Variable="umfang_einwillig" redcap:FieldType="textarea" redcap:FieldNote="JSON" redcap:RequiredField="y" redcap:BranchingLogic="[datum_einwillig_forsch] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Umfang der Forschung-Einwilligung</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="datum_einwillig_f_wid" Name="datum_einwillig_f_wid" DataType="date" Length="999" redcap:Variable="datum_einwillig_f_wid" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
 		<Question><TranslatedText>Datum des Widerrufs der Forschung-Einwilligung </TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="umfang_einwillig_f_wid" Name="umfang_einwillig_f_wid" DataType="text" Length="999" redcap:Variable="umfang_einwillig_f_wid" redcap:FieldType="textarea" redcap:FieldNote="JSON" redcap:BranchingLogic="[datum_einwillig_f_wid] &lt;&gt; &#039;&#039;">
+	<ItemDef OID="umfang_einwillig_f_wid" Name="umfang_einwillig_f_wid" DataType="text" Length="999" redcap:Variable="umfang_einwillig_f_wid" redcap:FieldType="textarea" redcap:FieldNote="JSON" redcap:RequiredField="y" redcap:BranchingLogic="[datum_einwillig_f_wid] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Umfang des Widerrufs der Forschung-Einwilligung </TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="forschungseinwilligungen_complete" Name="forschungseinwilligungen_complete" DataType="text" Length="1" redcap:Variable="forschungseinwilligungen_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
@@ -489,7 +498,7 @@
 	<ItemDef OID="hpo" Name="hpo" DataType="text" Length="999" redcap:Variable="hpo" redcap:FieldType="text" redcap:RequiredField="y" redcap:OntologySearch="BIOPORTAL:HP">
 		<Question><TranslatedText>Phänotypisierung auf der Grundlage der HPO</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="version_hpo" Name="version_hpo" DataType="text" Length="999" redcap:Variable="version_hpo" redcap:FieldType="text" redcap:RequiredField="y">
+	<ItemDef OID="version_hpo" Name="version_hpo" DataType="text" Length="999" redcap:Variable="version_hpo" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="@DEFAULT=&#039;2.2&#039;">
 		<Question><TranslatedText>Version HP Ontology</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="beginn_symptome" Name="beginn_symptome" DataType="date" Length="999" redcap:Variable="beginn_symptome" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldNote="01-MM-YYYY" redcap:RequiredField="y">
@@ -499,14 +508,14 @@
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
 		<CodeListRef CodeListOID="hpo_complete.choices"/>
 	</ItemDef>
-	<ItemDef OID="studien_register" Name="studien_register" DataType="text" Length="1" redcap:Variable="studien_register" redcap:FieldType="select" redcap:BranchingLogic="[studienname] = &#039;&#039;" redcap:FieldAnnotation="// mehr Studien?">
+	<ItemDef OID="studien_register" Name="studien_register" DataType="text" Length="1" redcap:Variable="studien_register" redcap:FieldType="select" redcap:FieldAnnotation="// mehr Studien?">
 		<Question><TranslatedText>Studien-Register</TranslatedText></Question>
 		<CodeListRef CodeListOID="studien_register.choices"/>
 	</ItemDef>
-	<ItemDef OID="studienname" Name="studienname" DataType="text" Length="999" redcap:Variable="studienname" redcap:FieldType="text" redcap:BranchingLogic="[studien_register] = &#039;&#039;">
+	<ItemDef OID="studienname" Name="studienname" DataType="text" Length="999" redcap:Variable="studienname" redcap:FieldType="text">
 		<Question><TranslatedText>Studienname</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="studien_id" Name="studien_id" DataType="text" Length="999" redcap:Variable="studien_id" redcap:FieldType="text" redcap:BranchingLogic="[studien_register] = &#039;&#039;">
+	<ItemDef OID="studien_id" Name="studien_id" DataType="text" Length="999" redcap:Variable="studien_id" redcap:FieldType="text">
 		<Question><TranslatedText>Studien-ID</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="studien_complete" Name="studien_complete" DataType="text" Length="1" redcap:Variable="studien_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
@@ -520,12 +529,39 @@
 	<ItemDef OID="therapie_beschreibung" Name="therapie_beschreibung" DataType="text" Length="999" redcap:Variable="therapie_beschreibung" redcap:FieldType="text" redcap:RequiredField="y">
 		<Question><TranslatedText>Beschreibung der empfohlenen Therapie</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="therapie_gen_variante" Name="therapie_gen_variante" DataType="text" Length="999" redcap:Variable="therapie_gen_variante" redcap:FieldType="text" redcap:FieldAnnotation="// wann verpflichtend?">
-		<Question><TranslatedText>der empfohlenen Therapie zugrundeliegende genetische Variante(n)</TranslatedText></Question>
+	<ItemDef OID="variante1" Name="variante1" DataType="text" Length="999" redcap:Variable="variante1" redcap:FieldType="text" redcap:SectionHeader="zugrundeliegende genetische Variante(n)" redcap:FieldAnnotation="@FORMINSTANCE=varianten">
+		<Question><TranslatedText>Variante 1</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="therapien_complete" Name="therapien_complete" DataType="text" Length="1" redcap:Variable="therapien_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+	<ItemDef OID="variante2" Name="variante2" DataType="text" Length="999" redcap:Variable="variante2" redcap:FieldType="text" redcap:FieldAnnotation="@FORMINSTANCE=varianten">
+		<Question><TranslatedText>Variante 2</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="variante3" Name="variante3" DataType="text" Length="999" redcap:Variable="variante3" redcap:FieldType="text" redcap:FieldAnnotation="@FORMINSTANCE=varianten">
+		<Question><TranslatedText>Variante 3</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="variante4" Name="variante4" DataType="text" Length="999" redcap:Variable="variante4" redcap:FieldType="text" redcap:FieldAnnotation="@FORMINSTANCE=varianten">
+		<Question><TranslatedText>Variante 4</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="variante5" Name="variante5" DataType="text" Length="999" redcap:Variable="variante5" redcap:FieldType="text" redcap:FieldAnnotation="@FORMINSTANCE=varianten">
+		<Question><TranslatedText>Variante 5</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="therapieempfehlungen_complete" Name="therapieempfehlungen_complete" DataType="text" Length="1" redcap:Variable="therapieempfehlungen_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
 		<Question><TranslatedText>Complete?</TranslatedText></Question>
-		<CodeListRef CodeListOID="therapien_complete.choices"/>
+		<CodeListRef CodeListOID="therapieempfehlungen_complete.choices"/>
+	</ItemDef>
+	<ItemDef OID="variante" Name="variante" DataType="text" Length="999" redcap:Variable="variante" redcap:FieldType="text" redcap:RequiredField="y">
+		<Question><TranslatedText>Variante</TranslatedText></Question>
+	</ItemDef>
+	<ItemDef OID="lok_variante" Name="lok_variante" DataType="text" Length="17" redcap:Variable="lok_variante" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Lokalisation der Variante</TranslatedText></Question>
+		<CodeListRef CodeListOID="lok_variante.choices"/>
+	</ItemDef>
+	<ItemDef OID="typ_variante" Name="typ_variante" DataType="text" Length="1" redcap:Variable="typ_variante" redcap:FieldType="select" redcap:RequiredField="y">
+		<Question><TranslatedText>Typ</TranslatedText></Question>
+		<CodeListRef CodeListOID="typ_variante.choices"/>
+	</ItemDef>
+	<ItemDef OID="varianten_complete" Name="varianten_complete" DataType="text" Length="1" redcap:Variable="varianten_complete" redcap:FieldType="select" redcap:SectionHeader="Form Status">
+		<Question><TranslatedText>Complete?</TranslatedText></Question>
+		<CodeListRef CodeListOID="varianten_complete.choices"/>
 	</ItemDef>
 	<ItemDef OID="klinisches_management" Name="klinisches_management" DataType="text" Length="32" redcap:Variable="klinisches_management" redcap:FieldType="select" redcap:RequiredField="y">
 		<Question><TranslatedText>Beschreibung klinisches Management</TranslatedText></Question>
@@ -580,6 +616,16 @@
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="leistungserbringer.choices" Name="leistungserbringer" DataType="text" redcap:Variable="leistungserbringer">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>ZSE A-Zentrum</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>arcT</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>ZSNE pädiatrisch</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="4"><Decode><TranslatedText>ZSNE adult</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="5"><Decode><TranslatedText>ZSPT</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>ZLKGKF</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="7"><Decode><TranslatedText>ZSA</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="8"><Decode><TranslatedText>IMGAG</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="iii_daten_der_einwilligung_und_teilnahmeerklaerung_complete.choices" Name="iii_daten_der_einwilligung_und_teilnahmeerklaerung_complete" DataType="text" redcap:Variable="iii_daten_der_einwilligung_und_teilnahmeerklaerung_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
@@ -643,16 +689,6 @@
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
 	</CodeList>
-	<CodeList OID="lok_variante.choices" Name="lok_variante" DataType="text" redcap:Variable="lok_variante">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>kodierend</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="2"><Decode><TranslatedText>in regulatorischen Elementen</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="3"><Decode><TranslatedText>nicht kodierende und nicht in regulatorischen Elementen</TranslatedText></Decode></CodeListItem>
-	</CodeList>
-	<CodeList OID="typ_variante.choices" Name="typ_variante" DataType="text" redcap:Variable="typ_variante">
-		<CodeListItem CodedValue="1"><Decode><TranslatedText>Kausale Variante</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="2"><Decode><TranslatedText>Zusatzbefunde</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="3"><Decode><TranslatedText>Verdachtsvariante</TranslatedText></Decode></CodeListItem>
-	</CodeList>
 	<CodeList OID="empf_klinisches_man.choices" Name="empf_klinisches_man" DataType="boolean" redcap:Variable="empf_klinisches_man">
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Yes</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>No</TranslatedText></Decode></CodeListItem>
@@ -675,6 +711,10 @@
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="vers_einwillig_forsch.choices" Name="vers_einwillig_forsch" DataType="text" redcap:Variable="vers_einwillig_forsch">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Kinder v.1.7.2</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Erwachsene v1.6d</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="forschungseinwilligungen_complete.choices" Name="forschungseinwilligungen_complete" DataType="text" redcap:Variable="forschungseinwilligungen_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
@@ -704,7 +744,24 @@
 		<CodeListItem CodedValue="causal-medication-administration"><Decode><TranslatedText>Kausale Therapie (medikamentös)</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="causal-intervention"><Decode><TranslatedText>Kausale Therapie (interventionell)</TranslatedText></Decode></CodeListItem>
 	</CodeList>
-	<CodeList OID="therapien_complete.choices" Name="therapien_complete" DataType="text" redcap:Variable="therapien_complete">
+	<CodeList OID="therapieempfehlungen_complete.choices" Name="therapieempfehlungen_complete" DataType="text" redcap:Variable="therapieempfehlungen_complete">
+		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="lok_variante.choices" Name="lok_variante" DataType="text" redcap:Variable="lok_variante">
+		<CodeListItem CodedValue="coding-region"><Decode><TranslatedText>Coding Region</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="splicing-region"><Decode><TranslatedText>Splicing Region</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="regulatory-region"><Decode><TranslatedText>Regulatory Region</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="intronic"><Decode><TranslatedText>Intronic</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="intergenic"><Decode><TranslatedText>Intergenic</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="typ_variante.choices" Name="typ_variante" DataType="text" redcap:Variable="typ_variante">
+		<CodeListItem CodedValue="1"><Decode><TranslatedText>Kausale Variante</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="2"><Decode><TranslatedText>Zusatzbefunde</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="3"><Decode><TranslatedText>Verdachtsvariante</TranslatedText></Decode></CodeListItem>
+	</CodeList>
+	<CodeList OID="varianten_complete.choices" Name="varianten_complete" DataType="text" redcap:Variable="varianten_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Unverified</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="2"><Decode><TranslatedText>Complete</TranslatedText></Decode></CodeListItem>
