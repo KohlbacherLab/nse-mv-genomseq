@@ -32,7 +32,7 @@ Die Projekteinstellungen müssen dann allerdings manuell vorgenommen werden, v.a
 - Datenstruktur: [PDF Datei](NSE_ohne_Fallmanagement_REDCap.pdf)
 
 ### 2. Aktivieren des Ontologie-Browsers
-Zur Eingabe der HPO-Codes etc. muss die Suche in den Ontologien aktiviert werden. Dazu wird der Service im Kontrollcenter -> Modules / Services Configuration aktiviert und ein gültiges Token für die Bioportal API hinterlegt:
+Zur Eingabe der HPO-Codes muss die Suche in den Ontologien aktiviert werden. Dazu wird der Service im Kontrollcenter -> Modules / Services Configuration aktiviert und ein gültiges Token für die Bioportal API hinterlegt:
 ![Ontologie Service](nse_bioportal.png)
 
 ### 3. Benötigte Module
@@ -40,8 +40,12 @@ Zur einfacheren Bedienung werden externe Module eingesetzt. Diese müssen von ei
 - Auto Populate Fields: Unterdrückung der Fehlermeldung für versteckte Vorgabe-Werte (@DEFAULT Action Tag)
 - Instance Select: Auswahl einer Instanz eines Formulars
 - Instance Table: Eingabe mehrerer Instanzen eines Formulars
+- Simple Ontology Module: zur Integration der Ontologien für ICD10-GM und Kreisschlüssel
 - Ansicht der im Projekt aktivierten Module: 
 ![Module](NSE_REDCap_Module.png)
+
+#### Einstellungen des Moduls "Simple Ontology Module"
+Import der Moduleinstellungen zur Verwendung von ICD10-GM und dem Kreisschlüssel: ![Module Settings](Simple_Ontology_Module_ModuleSettingsExport.zip)
 
   
 

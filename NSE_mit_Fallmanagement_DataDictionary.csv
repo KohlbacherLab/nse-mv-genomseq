@@ -23,10 +23,10 @@ forschung_einwill_desc;iii_daten_der_einwilligung_und_teilnahmeerklaerung;Forsch
 @INSTANCETABLE_ADDBTNLABEL='Neue Einwilligung'"
 gender;iv_allgemeine_daten_zum_modellvorhaben;;dropdown;Geschlecht;"male, Männlich | female, Weiblich | other, Divers | unknown, Unbekannt";;;;;;;y;;;;;
 birthdate;iv_allgemeine_daten_zum_modellvorhaben;;text;Geburtsdatum;;01-MM-YYYY;date_dmy;;;;;y;;;;;
-ags;iv_allgemeine_daten_zum_modellvorhaben;;text;AGS;;;;;;;;y;;;;;" @CHARLIMIT=5"
+ags;iv_allgemeine_daten_zum_modellvorhaben;;text;"Amtlicher Gemeindeschlüssel (5-stellig)";SIMPLE:AGS_5;;;;;;;y;;;;;
 grunderkrankung;iv_allgemeine_daten_zum_modellvorhaben;;notes;"Grunderkrankung, kurze klinische Beschreibung und Fragestellung Fallkonferenz";;;;;;;;y;;;;;"// NO_EXPORT"
-datum_fallkonferenz;iv_allgemeine_daten_zum_modellvorhaben;"Vorstellung des Versicherten zur Teilnahme am Modellvorhaben";text;"Datum der Fallkonferenz";;"Fallkonferenz 1";date_dmy;;;;"[aufnahme_mvh] <> ''";y;;;;;
-aufnahme_mvh;iv_allgemeine_daten_zum_modellvorhaben;;yesno;"Entscheidung der multidisziplinären Fallkonferenz im Bereich der Diagnostik zur Aufnahme des Versicherten in das Modellvorhaben";;"FK prüft, ob Indikation für Genomseq. gegeben ist oder nicht";;;;;;y;;;;;
+aufnahme_mvh;iv_allgemeine_daten_zum_modellvorhaben;"Vorstellung des Versicherten zur Teilnahme am Modellvorhaben";yesno;"Entscheidung der multidisziplinären Fallkonferenz im Bereich der Diagnostik zur Aufnahme des Versicherten in das Modellvorhaben";;"FK prüft, ob Indikation für Genomseq. gegeben ist oder nicht";;;;;;y;;;;;
+datum_fallkonferenz;iv_allgemeine_daten_zum_modellvorhaben;;text;"Datum der Fallkonferenz";;"Fallkonferenz 1";date_dmy;;;;"[aufnahme_mvh] <> ''";y;;;;;
 fallkonferenz_grund;iv_allgemeine_daten_zum_modellvorhaben;;dropdown;"Begründung der negativen Entscheidung (keine Genomsequenzierung)";"1, Zieldiagnostik empfohlen | 2, wahrscheinlich psychosomatische Erkrankung | 3, wahrscheinlich häufige Erkrankung | 4, wahrscheinlich nicht genetische Ursache | 5, anderer Grund";;;;;;"[aufnahme_mvh] = '0' and [datum_fallkonferenz] <> ''";y;;;;;
 hpo_desc;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;Phänotypisierung;descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=hpo
 @INSTANCETABLE_HIDEINSTANCECOL
@@ -34,8 +34,8 @@ hpo_desc;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;Phänotypisierung;de
 klin_datum_fallkonferenz;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;"Entscheidung der multidisziplinären Fallkonferenz";text;"Datum Fallkonferenz";;;date_dmy;;;;;y;;;;;
 diagnostik_empfehlung;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;"der Empfehlung zugrundeliegende Genomdiagnostik";"1, Einzelgenom | 2, Duogenom | 3, Triogenom";;;;;;"[klin_datum_fallkonferenz] <> ''";y;;;;;
 bewertung_gen_diagnostik;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;dropdown;"Bewertung der genetischen Diagnostik";"unsolved, keine genetische Diagnosestellung | unclear, Genetische Verdachtsdiagnose | 3, weiterführende genetische Diagnostik empfohlen | solved, Genetische Diagnose gesichert | partially-solved, klinischer Phänotyp nur partiell gelöst";;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
-diag_icd10;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;Diagnose;text;"Diagnose ICD-10";BIOPORTAL:ICD10;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;"// Version?"
-diag_icd10_ver;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"ICD10 Version";;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;" @IF([diag_icd10_ver] = '',@SETVALUE='2024AA','')"
+diag_icd10;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;Diagnose;text;"Diagnose ICD-10";SIMPLE:ICD-10-GM;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
+diag_icd10_ver;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"ICD10 Version";;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;" @IF([diag_icd10_ver] = '',@SETVALUE='2025','')"
 diag_orphacode;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"Diagnose Orphanet (ORPHAcode)";BIOPORTAL:ORDO;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;
 diag_orphacode_ver;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;"ORPHAcode Version";;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;" @IF([diag_orphacode_ver] = '',@SETVALUE='4.5','')"
 diag_se_code;v_klinische_daten_mit_bezug_zur_teilnahme_am_model;;text;[Alpha]-ID-SE-Code;;;;;;;"[klin_datum_fallkonferenz] <> ''";;;;;;

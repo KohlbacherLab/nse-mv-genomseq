@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" AsOfDateTime="2024-11-06T15:42:40" CreationDateTime="2024-11-06T15:42:40" SourceSystem="REDCap" SourceSystemVersion="14.7.2">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" AsOfDateTime="2024-12-12T11:28:33" CreationDateTime="2024-12-12T11:28:33" SourceSystem="REDCap" SourceSystemVersion="14.9.1">
 <Study OID="Project.NetzwerkSelteneErkankungenOhne">
 <GlobalVariables>
 	<StudyName>Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)</StudyName>
 	<StudyDescription>This file contains the metadata, events, and data for REDCap project "Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)".</StudyDescription>
 	<ProtocolName>Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)</ProtocolName>
 	<redcap:RecordAutonumberingEnabled>0</redcap:RecordAutonumberingEnabled>
-	<redcap:CustomRecordLabel></redcap:CustomRecordLabel>
+	<redcap:CustomRecordLabel>[pat_id]</redcap:CustomRecordLabel>
 	<redcap:SecondaryUniqueField></redcap:SecondaryUniqueField>
-	<redcap:SecondaryUniqueFieldDisplayValue>1</redcap:SecondaryUniqueFieldDisplayValue>
-	<redcap:SecondaryUniqueFieldDisplayLabel>1</redcap:SecondaryUniqueFieldDisplayLabel>
+	<redcap:SecondaryUniqueFieldDisplayValue>0</redcap:SecondaryUniqueFieldDisplayValue>
+	<redcap:SecondaryUniqueFieldDisplayLabel>0</redcap:SecondaryUniqueFieldDisplayLabel>
 	<redcap:SchedulingEnabled>0</redcap:SchedulingEnabled>
 	<redcap:SurveysEnabled>0</redcap:SurveysEnabled>
 	<redcap:SurveyInvitationEmailField></redcap:SurveyInvitationEmailField>
@@ -29,7 +29,7 @@
 	<redcap:FormActivationSurveyAutocontinue>0</redcap:FormActivationSurveyAutocontinue>
 	<redcap:MissingDataCodes></redcap:MissingDataCodes>
 	<redcap:ProtectedEmailMode>0</redcap:ProtectedEmailMode>
-	<redcap:ProtectedEmailModeCustomText></redcap:ProtectedEmailModeCustomText>
+	<redcap:ProtectedEmailModeCustomText>REDCap Sichere Nachrichtenübermittlung</redcap:ProtectedEmailModeCustomText>
 	<redcap:ProtectedEmailModeTrigger>ALL</redcap:ProtectedEmailModeTrigger>
 	<redcap:ProtectedEmailModeLogo></redcap:ProtectedEmailModeLogo>
 	<redcap:RepeatingInstrumentsAndEvents>
@@ -52,7 +52,7 @@
 		<redcap:FormDisplayLogicConditions control_condition="[psn] &lt;&gt; &quot;&quot;" forms_events="event_1_arm_1:iii_daten_der_einwilligung_und_teilnahmeerklaerung,event_1_arm_1:iv_allgemeine_daten_zum_modellvorhaben,event_1_arm_1:v_klinische_daten_mit_bezug_zur_teilnahme_am_model,event_1_arm_1:vi_klinische_daten_zu_vorbefunden,event_1_arm_1:vii_klinische_daten_zur_nachverfolgung,event_1_arm_1:forschungseinwilligungen,event_1_arm_1:hpo,event_1_arm_1:studien,event_1_arm_1:therapien,event_1_arm_1:klinisches_management,event_1_arm_1:genetische_vorbefunde,event_1_arm_1:wiedervorstellungen"/>
 	</redcap:FormDisplayLogicConditionsGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.NetzwerkSelteneErkankungenOhne_2024-11-06_1542" Name="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" redcap:RecordIdField="psn">
+<MetaDataVersion OID="Metadata.NetzwerkSelteneErkankungenOhne_2024-12-12_1128" Name="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" redcap:RecordIdField="psn">
 	<FormDef OID="Form.pseudonym" Name="Pseudonym" Repeating="No" redcap:FormName="pseudonym">
 		<ItemGroupRef ItemGroupOID="pseudonym.psn" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="pseudonym.pseudonym_complete" Mandatory="No"/>
@@ -65,8 +65,8 @@
 	</FormDef>
 	<FormDef OID="Form.iv_allgemeine_daten_zum_modellvorhaben" Name="IV. Allgemeine Daten zum Modellvorhaben" Repeating="No" redcap:FormName="iv_allgemeine_daten_zum_modellvorhaben">
 		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.gender" Mandatory="No"/>
-		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="iv_allgemeine_daten_zum_modellvorhaben.iv_allgemeine_daten_zum_modellvorhaben_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.v_klinische_daten_mit_bezug_zur_teilnahme_am_model" Name="V. Klinische Daten mit Bezug zur Teilnahme am Modellvorhaben" Repeating="No" redcap:FormName="v_klinische_daten_mit_bezug_zur_teilnahme_am_model">
@@ -155,11 +155,11 @@
 		<ItemRef ItemOID="ags" Mandatory="Yes" redcap:Variable="ags"/>
 		<ItemRef ItemOID="grunderkrankung" Mandatory="Yes" redcap:Variable="grunderkrankung"/>
 	</ItemGroupDef>
-	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Name="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" Repeating="No">
-		<ItemRef ItemOID="datum_fallkonferenz" Mandatory="Yes" redcap:Variable="datum_fallkonferenz"/>
-	</ItemGroupDef>
-	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Name="IV. Allgemeine Daten zum Modellvorhaben" Repeating="No">
+	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.aufnahme_mvh" Name="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" Repeating="No">
 		<ItemRef ItemOID="aufnahme_mvh" Mandatory="Yes" redcap:Variable="aufnahme_mvh"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.datum_fallkonferenz" Name="IV. Allgemeine Daten zum Modellvorhaben" Repeating="No">
+		<ItemRef ItemOID="datum_fallkonferenz" Mandatory="Yes" redcap:Variable="datum_fallkonferenz"/>
 		<ItemRef ItemOID="fallkonferenz_grund" Mandatory="Yes" redcap:Variable="fallkonferenz_grund"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="iv_allgemeine_daten_zum_modellvorhaben.iv_allgemeine_daten_zum_modellvorhaben_complete" Name="Form Status" Repeating="No">
@@ -343,18 +343,18 @@
 	<ItemDef OID="birthdate" Name="birthdate" DataType="date" Length="999" redcap:Variable="birthdate" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldNote="01-MM-YYYY" redcap:RequiredField="y">
 		<Question><TranslatedText>Geburtsdatum</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="ags" Name="ags" DataType="text" Length="999" redcap:Variable="ags" redcap:FieldType="text" redcap:RequiredField="y" redcap:FieldAnnotation="@CHARLIMIT=5">
-		<Question><TranslatedText>AGS</TranslatedText></Question>
+	<ItemDef OID="ags" Name="ags" DataType="text" Length="999" redcap:Variable="ags" redcap:FieldType="text" redcap:RequiredField="y" redcap:OntologySearch="SIMPLE:AGS_5">
+		<Question><TranslatedText>Amtlicher Gemeindeschlüssel (5-stellig)</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="grunderkrankung" Name="grunderkrankung" DataType="text" Length="999" redcap:Variable="grunderkrankung" redcap:FieldType="textarea" redcap:RequiredField="y" redcap:FieldAnnotation="// NO_EXPORT">
 		<Question><TranslatedText>Grunderkrankung, kurze klinische Beschreibung und Fragestellung Fallkonferenz</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="datum_fallkonferenz" Name="datum_fallkonferenz" DataType="date" Length="999" redcap:Variable="datum_fallkonferenz" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldNote="Fallkonferenz 1" redcap:SectionHeader="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" redcap:RequiredField="y" redcap:BranchingLogic="[aufnahme_mvh] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Datum der Fallkonferenz</TranslatedText></Question>
-	</ItemDef>
-	<ItemDef OID="aufnahme_mvh" Name="aufnahme_mvh" DataType="boolean" Length="1" redcap:Variable="aufnahme_mvh" redcap:FieldType="yesno" redcap:FieldNote="FK prüft, ob Indikation für Genomseq. gegeben ist oder nicht" redcap:RequiredField="y">
+	<ItemDef OID="aufnahme_mvh" Name="aufnahme_mvh" DataType="boolean" Length="1" redcap:Variable="aufnahme_mvh" redcap:FieldType="yesno" redcap:FieldNote="FK prüft, ob Indikation für Genomseq. gegeben ist oder nicht" redcap:SectionHeader="Vorstellung des Versicherten zur Teilnahme am Modellvorhaben" redcap:RequiredField="y">
 		<Question><TranslatedText>Entscheidung der multidisziplinären Fallkonferenz im Bereich der Diagnostik zur Aufnahme des Versicherten in das Modellvorhaben</TranslatedText></Question>
 		<CodeListRef CodeListOID="aufnahme_mvh.choices"/>
+	</ItemDef>
+	<ItemDef OID="datum_fallkonferenz" Name="datum_fallkonferenz" DataType="date" Length="999" redcap:Variable="datum_fallkonferenz" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:FieldNote="Fallkonferenz 1" redcap:RequiredField="y" redcap:BranchingLogic="[aufnahme_mvh] &lt;&gt; &#039;&#039;">
+		<Question><TranslatedText>Datum der Fallkonferenz</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="fallkonferenz_grund" Name="fallkonferenz_grund" DataType="text" Length="1" redcap:Variable="fallkonferenz_grund" redcap:FieldType="select" redcap:RequiredField="y" redcap:BranchingLogic="[aufnahme_mvh] = &#039;0&#039; and [datum_fallkonferenz] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Begründung der negativen Entscheidung (keine Genomsequenzierung)</TranslatedText></Question>
@@ -380,10 +380,10 @@
 		<Question><TranslatedText>Bewertung der genetischen Diagnostik</TranslatedText></Question>
 		<CodeListRef CodeListOID="bewertung_gen_diagnostik.choices"/>
 	</ItemDef>
-	<ItemDef OID="diag_icd10" Name="diag_icd10" DataType="text" Length="999" redcap:Variable="diag_icd10" redcap:FieldType="text" redcap:SectionHeader="Diagnose" redcap:OntologySearch="BIOPORTAL:ICD10" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="// Version?">
+	<ItemDef OID="diag_icd10" Name="diag_icd10" DataType="text" Length="999" redcap:Variable="diag_icd10" redcap:FieldType="text" redcap:SectionHeader="Diagnose" redcap:OntologySearch="SIMPLE:ICD-10-GM" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Diagnose ICD-10</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="diag_icd10_ver" Name="diag_icd10_ver" DataType="text" Length="999" redcap:Variable="diag_icd10_ver" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@IF([diag_icd10_ver] = &#039;&#039;,@SETVALUE=&#039;2024AA&#039;,&#039;&#039;)">
+	<ItemDef OID="diag_icd10_ver" Name="diag_icd10_ver" DataType="text" Length="999" redcap:Variable="diag_icd10_ver" redcap:FieldType="text" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;" redcap:FieldAnnotation="@IF([diag_icd10_ver] = &#039;&#039;,@SETVALUE=&#039;2025&#039;,&#039;&#039;)">
 		<Question><TranslatedText>ICD10 Version</TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="diag_orphacode" Name="diag_orphacode" DataType="text" Length="999" redcap:Variable="diag_orphacode" redcap:FieldType="text" redcap:OntologySearch="BIOPORTAL:ORDO" redcap:BranchingLogic="[klin_datum_fallkonferenz] &lt;&gt; &#039;&#039;">
