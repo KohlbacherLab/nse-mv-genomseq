@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" AsOfDateTime="2025-04-17T09:41:53" CreationDateTime="2025-04-17T09:41:53" SourceSystem="REDCap" SourceSystemVersion="15.0.19">
+<ODM xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:redcap="https://projectredcap.org" xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 schema/odm/ODM1-3-1.xsd" ODMVersion="1.3.1" FileOID="000-00-0000" FileType="Snapshot" Description="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" AsOfDateTime="2025-07-21T19:14:02" CreationDateTime="2025-07-21T19:14:02" SourceSystem="REDCap" SourceSystemVersion="15.0.33">
 <Study OID="Project.NetzwerkSelteneErkankungenOhne">
 <GlobalVariables>
 	<StudyName>Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)</StudyName>
@@ -55,7 +55,7 @@
 		<redcap:FormDisplayLogicConditions control_condition="[psn] &lt;&gt; &quot;&quot;" forms_events="event_1_arm_1:iii_daten_der_einwilligung_und_teilnahmeerklaerung,event_1_arm_1:iv_allgemeine_daten_zum_modellvorhaben,event_1_arm_1:v_klinische_daten_mit_bezug_zur_teilnahme_am_model,event_1_arm_1:vi_klinische_daten_zu_vorbefunden,event_1_arm_1:vii_klinische_daten_zur_nachverfolgung,event_1_arm_1:forschungseinwilligungen,event_1_arm_1:hpo,event_1_arm_1:studien,event_1_arm_1:therapien,event_1_arm_1:klinisches_management,event_1_arm_1:genetische_vorbefunde,event_1_arm_1:wiedervorstellungen"/>
 	</redcap:FormDisplayLogicConditionsGroup>
 </GlobalVariables>
-<MetaDataVersion OID="Metadata.NetzwerkSelteneErkankungenOhne_2025-04-17_0941" Name="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" redcap:RecordIdField="psn">
+<MetaDataVersion OID="Metadata.NetzwerkSelteneErkankungenOhne_2025-07-21_1914" Name="Netzwerk Seltene Erkankungen (ohne Daten aus Fallmanagement)" redcap:RecordIdField="psn">
 	<FormDef OID="Form.pseudonym" Name="Pseudonym" Repeating="No" redcap:FormName="pseudonym">
 		<ItemGroupRef ItemGroupOID="pseudonym.psn" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="pseudonym.pseudonym_complete" Mandatory="No"/>
@@ -103,6 +103,8 @@
 	</FormDef>
 	<FormDef OID="Form.forschungseinwilligungen" Name="Forschungseinwilligungen" Repeating="No" redcap:FormName="forschungseinwilligungen">
 		<ItemGroupRef ItemGroupOID="forschungseinwilligungen.datum_einwillig_forsch" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="forschungseinwilligungen.datum_einwillig_f_wid" Mandatory="No"/>
+		<ItemGroupRef ItemGroupOID="forschungseinwilligungen.umfang_einwillig_f_wid" Mandatory="No"/>
 		<ItemGroupRef ItemGroupOID="forschungseinwilligungen.forschungseinwilligungen_complete" Mandatory="No"/>
 	</FormDef>
 	<FormDef OID="Form.hpo" Name="HPO" Repeating="No" redcap:FormName="hpo">
@@ -255,10 +257,12 @@
 	</ItemGroupDef>
 	<ItemGroupDef OID="forschungseinwilligungen.datum_einwillig_forsch" Name="Forschungseinwilligungen" Repeating="No">
 		<ItemRef ItemOID="datum_einwillig_forsch" Mandatory="No" redcap:Variable="datum_einwillig_forsch"/>
-		<ItemRef ItemOID="researchconsentpresentationdate" Mandatory="No" redcap:Variable="researchconsentpresentationdate"/>
 		<ItemRef ItemOID="vers_einwillig_forsch" Mandatory="Yes" redcap:Variable="vers_einwillig_forsch"/>
-		<ItemRef ItemOID="umfang_einwillig" Mandatory="Yes" redcap:Variable="umfang_einwillig"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="forschungseinwilligungen.datum_einwillig_f_wid" Name="Widerruf" Repeating="No">
 		<ItemRef ItemOID="datum_einwillig_f_wid" Mandatory="No" redcap:Variable="datum_einwillig_f_wid"/>
+	</ItemGroupDef>
+	<ItemGroupDef OID="forschungseinwilligungen.umfang_einwillig_f_wid" Name="Forschungseinwilligungen" Repeating="No">
 		<ItemRef ItemOID="umfang_einwillig_f_wid" Mandatory="Yes" redcap:Variable="umfang_einwillig_f_wid"/>
 	</ItemGroupDef>
 	<ItemGroupDef OID="forschungseinwilligungen.forschungseinwilligungen_complete" Name="Form Status" Repeating="No">
@@ -504,7 +508,7 @@
 	<ItemDef OID="dauer_stat_vortherapie" Name="dauer_stat_vortherapie" DataType="integer" Length="999" redcap:Variable="dauer_stat_vortherapie" redcap:FieldType="text" redcap:TextValidationType="int" redcap:FieldAnnotation="@READONLY">
 		<Question><TranslatedText>Geschätzte Dauer der stationären fallrelevanten Vortherapie in Tagen</TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="dauer_stat_vortherapie_en" Name="dauer_stat_vortherapie_en" DataType="text" Length="15" redcap:Variable="dauer_stat_vortherapie_en" redcap:FieldType="select" redcap:RequiredField="y">
+	<ItemDef OID="dauer_stat_vortherapie_en" Name="dauer_stat_vortherapie_en" DataType="text" Length="13" redcap:Variable="dauer_stat_vortherapie_en" redcap:FieldType="select" redcap:RequiredField="y">
 		<Question><TranslatedText>Geschätzte Dauer der stationären fallrelevanten Vortherapie in Tagen (Auswahl)</TranslatedText></Question>
 		<CodeListRef CodeListOID="dauer_stat_vortherapie_en.choices"/>
 	</ItemDef>
@@ -539,17 +543,11 @@
 		<Question><TranslatedText>Datum der Forschung-Einwilligung 
 </TranslatedText></Question>
 	</ItemDef>
-	<ItemDef OID="researchconsentpresentationdate" Name="researchconsentpresentationdate" DataType="date" Length="999" redcap:Variable="researchconsentpresentationdate" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
-		<Question><TranslatedText>Datum der Aushändigung</TranslatedText></Question>
-	</ItemDef>
 	<ItemDef OID="vers_einwillig_forsch" Name="vers_einwillig_forsch" DataType="text" Length="1" redcap:Variable="vers_einwillig_forsch" redcap:FieldType="select" redcap:RequiredField="y" redcap:BranchingLogic="[datum_einwillig_forsch] &lt;&gt; &#039;&#039;">
 		<Question><TranslatedText>Version der Forschung-Einwilligung</TranslatedText></Question>
 		<CodeListRef CodeListOID="vers_einwillig_forsch.choices"/>
 	</ItemDef>
-	<ItemDef OID="umfang_einwillig" Name="umfang_einwillig" DataType="text" Length="999" redcap:Variable="umfang_einwillig" redcap:FieldType="textarea" redcap:FieldNote="JSON" redcap:RequiredField="y" redcap:BranchingLogic="[datum_einwillig_forsch] &lt;&gt; &#039;&#039;">
-		<Question><TranslatedText>Umfang der Forschung-Einwilligung</TranslatedText></Question>
-	</ItemDef>
-	<ItemDef OID="datum_einwillig_f_wid" Name="datum_einwillig_f_wid" DataType="date" Length="999" redcap:Variable="datum_einwillig_f_wid" redcap:FieldType="text" redcap:TextValidationType="date_dmy">
+	<ItemDef OID="datum_einwillig_f_wid" Name="datum_einwillig_f_wid" DataType="date" Length="999" redcap:Variable="datum_einwillig_f_wid" redcap:FieldType="text" redcap:TextValidationType="date_dmy" redcap:SectionHeader="Widerruf">
 		<Question><TranslatedText>Datum des Widerrufs der Forschung-Einwilligung </TranslatedText></Question>
 	</ItemDef>
 	<ItemDef OID="umfang_einwillig_f_wid" Name="umfang_einwillig_f_wid" DataType="text" Length="999" redcap:Variable="umfang_einwillig_f_wid" redcap:FieldType="textarea" redcap:FieldNote="JSON" redcap:RequiredField="y" redcap:BranchingLogic="[datum_einwillig_f_wid] &lt;&gt; &#039;&#039;">
@@ -849,9 +847,9 @@
 	<CodeList OID="dauer_stat_vortherapie_en.choices" Name="dauer_stat_vortherapie_en" DataType="text" redcap:Variable="dauer_stat_vortherapie_en">
 		<CodeListItem CodedValue="none"><Decode><TranslatedText>keine</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="upToFive"><Decode><TranslatedText>bis zu 5</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="upToTen"><Decode><TranslatedText>bis zu 10</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="upToFifteen"><Decode><TranslatedText>bis zu 15</TranslatedText></Decode></CodeListItem>
-		<CodeListItem CodedValue="moreThanFifteen"><Decode><TranslatedText>&gt;15</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="upToFifty"><Decode><TranslatedText>bis zu 50</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="moreThanFifty"><Decode><TranslatedText>&gt;50</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="unknown"><Decode><TranslatedText>unbekannt</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="vi_klinische_daten_zu_vorbefunden_complete.choices" Name="vi_klinische_daten_zu_vorbefunden_complete" DataType="text" redcap:Variable="vi_klinische_daten_zu_vorbefunden_complete">
@@ -961,11 +959,13 @@
 		<CodeListItem CodedValue="6"><Decode><TranslatedText>andere</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="7"><Decode><TranslatedText>genome-short-read</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="8"><Decode><TranslatedText>genome-long-read</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="9"><Decode><TranslatedText>keine</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="genomicstudytype.choices" Name="genomicstudytype" DataType="text" redcap:Variable="genomicstudytype">
 		<CodeListItem CodedValue="single"><Decode><TranslatedText>Single</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="duo"><Decode><TranslatedText>Duo</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="trio"><Decode><TranslatedText>Trio</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="keine"><Decode><TranslatedText>keine</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="ergebnis_diagnostik.choices" Name="ergebnis_diagnostik" DataType="text" redcap:Variable="ergebnis_diagnostik">
 		<CodeListItem CodedValue="1"><Decode><TranslatedText>Phänotyp nicht komplett geklärt</TranslatedText></Decode></CodeListItem>
@@ -973,6 +973,7 @@
 		<CodeListItem CodedValue="3"><Decode><TranslatedText>heterozygote Variante bei genetischer Erkrankung</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="4"><Decode><TranslatedText>keine pathogene Variante detektiert</TranslatedText></Decode></CodeListItem>
 		<CodeListItem CodedValue="5"><Decode><TranslatedText>sonstige</TranslatedText></Decode></CodeListItem>
+		<CodeListItem CodedValue="6"><Decode><TranslatedText>keine</TranslatedText></Decode></CodeListItem>
 	</CodeList>
 	<CodeList OID="genetische_vorbefunde_complete.choices" Name="genetische_vorbefunde_complete" DataType="text" redcap:Variable="genetische_vorbefunde_complete">
 		<CodeListItem CodedValue="0"><Decode><TranslatedText>Incomplete</TranslatedText></Decode></CodeListItem>

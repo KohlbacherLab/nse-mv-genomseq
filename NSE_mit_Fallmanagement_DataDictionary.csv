@@ -67,7 +67,7 @@ gen_vorbefunde_desc;vi_klinische_daten_zu_vorbefunden;"fallrelevante, genetische
 anzahl_stat_behandlungen;vi_klinische_daten_zu_vorbefunden;"fallrelevante Vortherapie";text;"Anzahl der stationären Behandlungen in den letzten fünf Jahren";;;integer;;;;;;;;;;" @READONLY"
 anzahl_stat_behandlungen_en;vi_klinische_daten_zu_vorbefunden;;dropdown;"Anzahl der stationären Behandlungen in den letzten fünf Jahren (Auswahl)";"none, keine | upToFive, bis zu 5 | upToTen, bis zu 10 | upToFifteen, bis zu 15 | moreThanFifteen, >15 | unknown, unbekannt";;;;;;;y;;;;;
 dauer_stat_vortherapie;vi_klinische_daten_zu_vorbefunden;;text;"Geschätzte Dauer der stationären fallrelevanten Vortherapie in Tagen";;;integer;;;;;;;;;;" @READONLY"
-dauer_stat_vortherapie_en;vi_klinische_daten_zu_vorbefunden;;dropdown;"Geschätzte Dauer der stationären fallrelevanten Vortherapie in Tagen (Auswahl)";"none, keine | upToFive, bis zu 5 | upToTen, bis zu 10 | upToFifteen, bis zu 15 | moreThanFifteen, >15 | unknown, unbekannt";;;;;;;y;;;;;
+dauer_stat_vortherapie_en;vi_klinische_daten_zu_vorbefunden;;dropdown;"Geschätzte Dauer der stationären fallrelevanten Vortherapie in Tagen (Auswahl)";"none, keine | upToFive, bis zu 5 | upToFifteen, bis zu 15 | upToFifty, bis zu 50 | moreThanFifty, >50 | unknown, unbekannt";;;;;;;y;;;;;
 datum_kontakt_zse;vi_klinische_daten_zu_vorbefunden;;text;"Monat und Jahr des ersten Kontakts mit einem spezialisierten Zentrum für Seltene Erkrankungen
 ";;01-MM-YYYY;date_dmy;;;;;y;;;;;
 wiedervorst_desc;vii_klinische_daten_zur_nachverfolgung;"Dokumentation Wiedervorstellungen";descriptive;;;;;;;;;;;;;;" @INSTANCETABLE=wiedervorstellungen
@@ -81,10 +81,9 @@ typ_meldung;meldungen;;dropdown;"Typ der Meldung";"1, Erstmeldungen | 2, Verlauf
 coveragetype;meldungen;;dropdown;Krankenversicherungsträger;"1, GKV | 2, PKV | 3, PKV/Beihilfe | 4, other";;;;;;;y;;;;;"// CASE_MANAGEMENT"
 datum_einwillig_forsch;forschungseinwilligungen;;text;"Datum der Forschung-Einwilligung 
 ";;;date_dmy;;;;;;;;;;
-researchconsentpresentationdate;forschungseinwilligungen;;text;"Datum der Aushändigung";;;date_dmy;;;;;;;;;;
+researchconsentpresentationdate;forschungseinwilligungen;;text;"Datum der Aushändigung";;;date_dmy;;;;;;;;;;"// CASE_MANAGEMENT"
 vers_einwillig_forsch;forschungseinwilligungen;;dropdown;"Version der Forschung-Einwilligung";"1, Kinder v.1.7.2 | 2, Erwachsene v1.6d";;;;;;"[datum_einwillig_forsch] <> ''";y;;;;;
-umfang_einwillig;forschungseinwilligungen;;notes;"Umfang der Forschung-Einwilligung";;JSON;;;;;"[datum_einwillig_forsch] <> ''";y;;;;;
-datum_einwillig_f_wid;forschungseinwilligungen;;text;"Datum des Widerrufs der Forschung-Einwilligung ";;;date_dmy;;;;;;;;;;
+datum_einwillig_f_wid;forschungseinwilligungen;Widerruf;text;"Datum des Widerrufs der Forschung-Einwilligung ";;;date_dmy;;;;;;;;;;
 umfang_einwillig_f_wid;forschungseinwilligungen;;notes;"Umfang des Widerrufs der Forschung-Einwilligung ";;JSON;;;;;"[datum_einwillig_f_wid] <> ''";y;;;;;
 hpo;hpo;;text;"Phänotypisierung auf der Grundlage der HPO";BIOPORTAL:HP;;;;;;;y;;;;;
 version_hpo;hpo;;text;"Version HP Ontology";;;;;;;;y;;;;;" @DEFAULT='2025-03-03'"
@@ -112,10 +111,10 @@ lok_variante;varianten;;dropdown;"Lokalisation der Variante";"coding-region, Cod
 typ_variante;varianten;;dropdown;Typ;"1, Kausale Variante | 2, Zusatzbefunde | 3, Verdachtsvariante";;;;;;;y;;;;;
 klinisches_management;klinisches_management;;text;"Beschreibung klinisches Management";;;;;;;;;;;;;" @READONLY"
 klinisches_management_dr;klinisches_management;;dropdown;"Beschreibung klinisches Management (Auswahl)";"diseaseSpecificAmbulatoryCare, Indikatorerkrankungsspezifische Ambulanz | universityAmbulatoryCare, Andere Hochschulambulanz | localCrd, Eigenes ZSE | otherCrd, Anderes ZSE | otherAmbulatoryCare, Andere Ambulanz | gp, Hausarzt | specialist, Niedergelassener Facharzt";;;;;;;;;;;;
-art_diagnostik;genetische_vorbefunde;;dropdown;"Art der Diagnostik";"1, Array | 2, Einzelgentestung | 3, Panel | 4, Chromosomenanalyse | 5, Exomanalyse | 6, andere | 7, genome-short-read | 8, genome-long-read";;;;;;;y;;;;;
-genomicstudytype;genetische_vorbefunde;;dropdown;"Frühere Diagnostik";"single, Single | duo, Duo | trio, Trio";;;;;;;y;;;;;
+art_diagnostik;genetische_vorbefunde;;dropdown;"Art der Diagnostik";"1, Array | 2, Einzelgentestung | 3, Panel | 4, Chromosomenanalyse | 5, Exomanalyse | 6, andere | 7, genome-short-read | 8, genome-long-read | 9, keine";;;;;;;y;;;;;
+genomicstudytype;genetische_vorbefunde;;dropdown;"Frühere Diagnostik";"single, Single | duo, Duo | trio, Trio | keine, keine";;;;;;;y;;;;;
 datum_diagnostik;genetische_vorbefunde;;text;"Datum der Diagnostik";;;date_dmy;;;;;y;;;;;
-ergebnis_diagnostik;genetische_vorbefunde;;dropdown;"Ergebnis der Diagnostik";"1, Phänotyp nicht komplett geklärt | 2, Strukturvariante mit unklarem Bruchpunkt | 3, heterozygote Variante bei genetischer Erkrankung | 4, keine pathogene Variante detektiert | 5, sonstige";;;;;;;;;;;;
+ergebnis_diagnostik;genetische_vorbefunde;;dropdown;"Ergebnis der Diagnostik";"1, Phänotyp nicht komplett geklärt | 2, Strukturvariante mit unklarem Bruchpunkt | 3, heterozygote Variante bei genetischer Erkrankung | 4, keine pathogene Variante detektiert | 5, sonstige | 6, keine";;;;;;;;;;;;
 datum_wiedervorst;wiedervorstellungen;;text;Datum;;;date_dmy;;;;;y;;;;;
 hpo_wiedervorst;wiedervorstellungen;;text;"Phänotypisierung auf der Grundlage der HPO";;;;;;;;;;;;;" @FORMINSTANCE=hpo"
 hpo_wiedervorst_aend;wiedervorstellungen;;dropdown;"Änderung des HPO";"1, neu hinzugekommen | 2, verbessert | 3, verschlechtert | 4, weggefallen | 5, unverändert";;;;;;;y;;;;;
